@@ -13,7 +13,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export ZDOTDIR="$HOME/.config/zsh"
 
 typeset -U path PATH
-path=($HOME/Applications $path)
+path=($HOME/Applications $HOME/bin $path)
 export PATH
 # export PATH="$PATH $HOME/Applications"
 
