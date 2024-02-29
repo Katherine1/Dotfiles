@@ -20,4 +20,4 @@ fi
 alias grep='grep --color=always'
 alias ip="ip -color"
 
-alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+#alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
