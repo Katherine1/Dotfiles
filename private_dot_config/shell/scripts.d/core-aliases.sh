@@ -13,9 +13,9 @@ if (( $+commands[bat] )); then
     fi
 fi
 
-if (( $+commands[zoxide] )); then
-    alias cd="z"
-fi
+#if (( $+commands[zoxide] )); then
+#    alias cd="z"
+#fi
 
 alias grep='grep --color=always'
 alias ip="ip -color"
