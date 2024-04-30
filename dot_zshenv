@@ -11,9 +11,11 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 export ZDOTDIR="$HOME/.config/zsh"
+export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
 
 typeset -U path PATH
 path=($HOME/Applications $HOME/bin $path)
+[[ -d $PYENV_ROOT/bin ]] && path=($PYENV_ROOT/bin $path)
 export PATH
 # export PATH="$PATH $HOME/Applications"
 
