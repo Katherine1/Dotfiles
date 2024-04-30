@@ -49,4 +49,4 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 [[ ! -f $XDG_CONFIG_HOME/zsh/.p10k.zsh ]] || source $XDG_CONFIG_HOME/zsh/.p10k.zsh
 
 eval "$(pyenv init -)"
-fastfetch
+#fastfetch
