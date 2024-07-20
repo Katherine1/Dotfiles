@@ -1,0 +1,13 @@
+import = [
+    "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[window]
+dimensions = { columns = 120, lines = 30 }
+
+dynamic_title = true
+
+[font]
+
+normal = { family = "Maple Mono SC NF", style = "Regular" }
+
