@@ -29,8 +29,6 @@ require("catppuccin").setup({
 
 local ctp_feline = require('catppuccin.groups.integrations.feline')
 
---ctp_feline.setup() -- breaks things, don't know why
-
 require("feline").setup({
     components = ctp_feline.get(),
 })
