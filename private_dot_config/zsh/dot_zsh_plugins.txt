@@ -1,5 +1,3 @@
-romkatv/powerlevel10k
-
 marlonrichert/zsh-autocomplete
 zsh-users/zsh-autosuggestions kind:defer
 zsh-users/zsh-history-substring-search kind:defer
