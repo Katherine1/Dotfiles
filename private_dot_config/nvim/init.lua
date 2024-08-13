@@ -37,7 +37,7 @@ require("lazy").setup({
 	{'williamboman/mason-lspconfig.nvim', dependencies = {'williamboman/mason.nvim', 'neovim/nvim-lspconfig'}},
     {'christoomey/vim-tmux-navigator', lazy = false},
     {'feline-nvim/feline.nvim', dependencies = {'catppuccin/nvim'}},
-    {'m4xshen/hardtime.nvim', dependencies = {'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim'}, opts = {} }
+--    {'m4xshen/hardtime.nvim', dependencies = {'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim'}, opts = {} }
 --    {'vhyrro/luarocks.nvim', priority=1000, config=true},
 --    {'nvim-neorg/neorg', dependencies = {'vhyrro/luarocks.nvim'}, lazy = false, version = "*", config = true}
 })
