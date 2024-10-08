@@ -33,10 +33,10 @@ require("lazy").setup({
     {'mbbill/undotree'},
 	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x', lazy = true, config = false},
 --	{'neovim/nvim-lspconfig', dependencies = {'hrsh7th/cmp-nvim-lsp'}},
-	{'neovim/nvim-lspconfig'},
+--	{'neovim/nvim-lspconfig'},
 --	{'hrsh7th/nvim-cmp', dependencies = {'L3MON4D3/LuaSnip'}},
     {'saghen/blink.cmp', version = 'v0.*', dependencies = {'rafamadriz/friendly-snippets'}, lazy = false},
-    {'williamboman/mason.nvim'},
+--    {'williamboman/mason.nvim'},
 	{'williamboman/mason-lspconfig.nvim', dependencies = {'williamboman/mason.nvim', 'neovim/nvim-lspconfig'}},
     {'christoomey/vim-tmux-navigator', lazy = false},
     {'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons'}}
