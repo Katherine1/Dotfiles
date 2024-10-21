@@ -27,20 +27,19 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{'nvim-telescope/telescope.nvim', branch= '0.1.x', dependencies = {'nvim-lua/plenary.nvim'}},
---    {'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
     {'ellisonleao/gruvbox.nvim', priority = 1000, config = true },
     {'nvim-treesitter/nvim-treesitter', run = {':TSUpdate'}},
     {'mbbill/undotree'},
 	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x', lazy = true, config = false},
---	{'neovim/nvim-lspconfig', dependencies = {'hrsh7th/cmp-nvim-lsp'}},
 	{'neovim/nvim-lspconfig'},
---	{'hrsh7th/nvim-cmp', dependencies = {'L3MON4D3/LuaSnip'}},
     {'saghen/blink.cmp', version = 'v0.*', dependencies = {'rafamadriz/friendly-snippets'}, lazy = false},
     {'williamboman/mason.nvim'},
 	{'williamboman/mason-lspconfig.nvim', dependencies = {'williamboman/mason.nvim', 'neovim/nvim-lspconfig'}},
     {'christoomey/vim-tmux-navigator', lazy = false},
-    {'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons'}}
---    {'feline-nvim/feline.nvim', dependencies = {'catppuccin/nvim'}},
+    {'nvim-tree/nvim-web-devicons'},
+    {'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons'}},
+    {'lewis6991/gitsigns.nvim'},
+    {'romgrk/barbar.nvim', dependencies = {'lewis6991/gitsigns.nvim', 'nvim-tree/nvim-web-devicons'}, version = '^1.0.0'}
 --    {'m4xshen/hardtime.nvim', dependencies = {'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim'}, opts = {} }
 --    {'vhyrro/luarocks.nvim', priority=1000, config=true},
 --    {'nvim-neorg/neorg', dependencies = {'vhyrro/luarocks.nvim'}, lazy = false, version = "*", config = true}
