@@ -29,7 +29,7 @@ require("lazy").setup({
 	{'nvim-telescope/telescope.nvim', branch= '0.1.x', dependencies = {'nvim-lua/plenary.nvim'}, lazy = true},
     {'ellisonleao/gruvbox.nvim', priority = 1000, config = true },
     {'nvim-treesitter/nvim-treesitter', run = {':TSUpdate'}, lazy = true},
-    {'mbbill/undotree', lazy = true},
+    {'mbbill/undotree', lazy = false},
 	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x', lazy = true, config = false},
 	{'neovim/nvim-lspconfig', lazy = true},
     {'saghen/blink.cmp', version = 'v0.*', dependencies = {'rafamadriz/friendly-snippets'}, lazy = false},
