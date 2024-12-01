@@ -52,5 +52,9 @@ require('mason-lspconfig').setup({
 --})
 
 require('blink.cmp').setup({
-    nerd_font_variant = 'mono'
+    nerd_font_variant = 'mono',
+    keymap = {
+        preset = 'default',
+        ['<Tab>'] = { 'select_and_accept' }
+    }
 })
