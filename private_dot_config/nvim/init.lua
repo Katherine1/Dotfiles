@@ -32,7 +32,6 @@ require("lazy").setup({
     {'mbbill/undotree', lazy = false},
 	{'neovim/nvim-lspconfig', dependencies = { 'hrsh7th/cmp-nvim-lsp' }, lazy = true},
     {'hrsh7th/nvim-cmp', dependencies = {'L3MON4D3/LuaSnip', 'hrsh7th/cmp-nvim-lsp', 'neovim/nvim-lspconfig' }, lazy = false},
---    {'saghen/blink.cmp', version = 'v0.*', dependencies = {'rafamadriz/friendly-snippets'}, lazy = false},
     {'williamboman/mason.nvim', lazy = true},
 	{'williamboman/mason-lspconfig.nvim', dependencies = {'williamboman/mason.nvim', 'neovim/nvim-lspconfig'}, lazy = true},
     {'christoomey/vim-tmux-navigator', lazy = false},
@@ -41,8 +40,5 @@ require("lazy").setup({
     {'lewis6991/gitsigns.nvim', lazy = true},
     {'ThePrimeagen/harpoon', branch = 'harpoon2', dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' }, lazy = false },
     {'romgrk/barbar.nvim', dependencies = {'lewis6991/gitsigns.nvim', 'nvim-tree/nvim-web-devicons'}, version = '^1.0.0'}
---    {'m4xshen/hardtime.nvim', dependencies = {'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim'}, opts = {} }
---    {'vhyrro/luarocks.nvim', priority=1000, config=true},
---    {'nvim-neorg/neorg', dependencies = {'vhyrro/luarocks.nvim'}, lazy = false, version = "*", config = true}
 })
 
