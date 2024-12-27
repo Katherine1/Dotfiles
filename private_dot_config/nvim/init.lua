@@ -39,6 +39,7 @@ require("lazy").setup({
     {'nvim-tree/nvim-web-devicons', lazy = true},
     {'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons'}},
     {'lewis6991/gitsigns.nvim', lazy = true},
+    {'ThePrimeagen/harpoon', branch = 'harpoon2', dependencies = { 'nvim-lua/plenary.nvim' }, lazy = false },
     {'romgrk/barbar.nvim', dependencies = {'lewis6991/gitsigns.nvim', 'nvim-tree/nvim-web-devicons'}, version = '^1.0.0'}
 --    {'m4xshen/hardtime.nvim', dependencies = {'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim'}, opts = {} }
 --    {'vhyrro/luarocks.nvim', priority=1000, config=true},
