@@ -27,14 +27,44 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'powershell_es', 'rust_analyzer', 'clangd', 'csharp_ls', 'cmake', 'gopls', 'jdtls', 'sqlls', 'pylsp'},
+  ensure_installed = {'lua_ls', 'powershell_es', 'rust_analyzer', 'clangd', 'csharp_ls', 'cmake', 'gopls', 'jdtls', 'sqlls', 'pylsp'},
   handlers = {
     function(server_name)
         require('lspconfig')[server_name].setup({})
     end,
     lua_ls = function()
-      local lua_opts = lsp_zero.nvim_lua_ls()
-      require('lspconfig').lua_ls.setup(lua_opts)
+        local runtime_path = vim.split(package.path, ';')
+        table.insert(runtime_path, 'lua/?.lua')
+        table.insert(runtime_path, 'lua/?/init.lua')
+
+        local config = {
+            settings = {
+                Lua = {
+                    -- Disable telemetry
+                    telemetry = {enable = false},
+                    runtime = {
+                        -- Tell the language server which version of Lua you're using
+                        -- (most likely LuaJIT in the case of Neovim)
+                        version = 'LuaJIT',
+                        path = runtime_path,
+                    },
+                    diagnostics = {
+                        -- Get the language server to recognize the `vim` global
+                        globals = {'vim'}
+                    },
+                    workspace = {
+                        checkThirdParty = false,
+                        library = {
+                            -- Make the server aware of Neovim runtime files
+                            vim.env.VIMRUNTIME,
+                            '${3rd}/luv/library'
+                        }
+                    }
+                }
+            }
+        }
+
+        require('lspconfig').lua_ls.setup(config)
     end,
   }
 })
