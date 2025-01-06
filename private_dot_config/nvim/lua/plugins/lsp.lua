@@ -11,7 +11,7 @@ return {
     config = function ()
         require('mason').setup({})
         require('mason-lspconfig').setup({
-            ensure_installed = {'lua_ls', 'powershell_es', 'rust_analyzer', 'clangd', 'csharp_ls', 'cmake', 'gopls', 'jdtls', 'sqlls', 'pylsp'},
+            ensure_installed = {'lua_ls', 'powershell_es', 'rust_analyzer', 'clangd', 'csharp_ls', 'neocmake', 'gopls', 'jdtls', 'sqlls', 'pylsp'},
             handlers = {
                 function(server_name)
                     local ok, config = pcall(require, 'lsp.' .. server_name)
