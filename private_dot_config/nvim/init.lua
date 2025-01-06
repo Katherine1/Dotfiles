@@ -1,6 +1,3 @@
-require("core.mappings")
-require("core.settings")
-
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -17,6 +14,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
+
+--Init core configs here
+require("core.mappings")
+require("core.settings")
+require("core.lsp")
 
 -- Setup lazy.nvim
 require("lazy").setup({
