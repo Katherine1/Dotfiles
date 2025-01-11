@@ -8,9 +8,7 @@ return {
     init = function ()
         vim.opt.signcolumn = 'yes'
     end,
-    config = function ()
-        require('mason').setup({})
-        require('mason-lspconfig').setup({
+    opts = {
             ensure_installed = {'lua_ls', 'powershell_es', 'rust_analyzer', 'clangd', 'csharp_ls', 'neocmake', 'gopls', 'jdtls', 'sqlls', 'pylsp'},
             handlers = {
                 function(server_name)
@@ -21,7 +19,6 @@ return {
                     require('lspconfig')[server_name].setup(config)
                 end
             }
-        })
-    end,
+    },
     lazy = false
 }

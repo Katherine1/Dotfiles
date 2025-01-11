@@ -3,5 +3,5 @@ return {
     keys = {
         {'<leader>u', vim.cmd.UndotreeToggle, mode = 'n'},
     },
-    lazy = false
+    lazy = true
 }

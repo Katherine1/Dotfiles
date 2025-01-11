@@ -6,9 +6,9 @@ return {
             virtual_text = false,
         })
     end,
-    config = function ()
-        vim.keymap.set("", "<Leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
-    end,
+    keys = {
+        { "<leader>l", function () require("lsp_lines").toggle() end, desc = "Toggle lsp_lines", mode = "n" },
+    },
     opts = true,
     lazy = false
 }
