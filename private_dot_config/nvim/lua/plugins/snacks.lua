@@ -9,6 +9,7 @@ return {
         indent = { enabled = true },
         input = {enabled = true },
         notifier = { enabled = true },
+        picker = { enabled = true },
         quickfile = { enabled = true },
         scroll = { enabled = true },
         statuscolumn = { enabled = true },
@@ -28,6 +29,7 @@ return {
         -- git
         { "<leader>gc", function() require('snacks').picker.git_log() end, desc = "Git Log" },
         { "<leader>gs", function() require('snacks').picker.git_status() end, desc = "Git Status" },
+        { "<leader>g?", function() require("snacks").git.blame_line() end, desc = "Git Blame line" },
         -- Grep
         { "<leader>sb", function() require('snacks').picker.lines() end, desc = "Buffer Lines" },
         { "<leader>sB", function() require('snacks').picker.grep_buffers() end, desc = "Grep Open Buffers" },
