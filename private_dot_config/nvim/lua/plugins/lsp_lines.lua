@@ -7,7 +7,7 @@ return {
         })
     end,
     keys = {
-        { "<leader>l", function () require("lsp_lines").toggle() end, desc = "Toggle lsp_lines", mode = "n" },
+        { "<leader>l", function () require("lsp_lines").toggle() end, mode="n", desc="Toggle lsp_lines"},
     },
     opts = true,
     lazy = false

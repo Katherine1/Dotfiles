@@ -26,5 +26,9 @@ return {
         dim_inactive = false,
         transparent_mode = false,
     },
+    keys = {
+        {"<leader>gtl", function() vim.o.background="light" end, mode='n', desc="Switch to Light Mode"},
+        {"<leader>gtd", function() vim.o.background="dark" end, mode='n', desc="Switch to Dark Mode"},
+    },
     lazy = false
 }
