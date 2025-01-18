@@ -9,16 +9,16 @@ return {
         vim.opt.signcolumn = 'yes'
     end,
     opts = {
-            ensure_installed = {'lua_ls', 'powershell_es', 'rust_analyzer', 'clangd', 'csharp_ls', 'neocmake', 'jdtls'},
-            handlers = {
-                function(server_name)
-                    local ok, config = pcall(require, 'lsp.' .. server_name)
-                    if not ok then
-                        config = {}
-                    end
-                    require('lspconfig')[server_name].setup(config)
+        ensure_installed = {'lua_ls', 'powershell_es', 'clangd', 'csharp_ls', 'neocmake', 'jdtls'},
+        handlers = {
+            function(server_name)
+                local ok, config = pcall(require, 'lsp.' .. server_name)
+                if not ok then
+                    config = {}
                 end
-            }
+                require('lspconfig')[server_name].setup(config)
+            end
+        }
     },
     lazy = false
 }
