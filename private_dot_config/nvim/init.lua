@@ -16,6 +16,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 --Init core configs here
+require("core.autocmds")
 require("core.mappings")
 require("core.settings")
 require("core.lsp")
