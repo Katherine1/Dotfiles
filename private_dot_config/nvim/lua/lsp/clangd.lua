@@ -1,6 +1,12 @@
 return {
   default_config = {
-    cmd = { 'clangd' },
+    cmd = {
+        'clangd',
+        "--background-index",
+        "--clang-tidy",
+        "--completion-style=bundled",
+        "--header-insertion=iwyu"
+    },
     filetypes = { 'c', 'cpp', 'cxx', 'objc', 'objcpp', 'cuda', 'proto', 'h', 'hpp' },
     root_markers = {
         '.clangd',
