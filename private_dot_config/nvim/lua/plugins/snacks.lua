@@ -21,6 +21,7 @@ return {
         { "<leader>/", function() require('snacks').picker.grep() end, mode='n', desc = "Grep" },
         { "<leader>:", function() require('snacks').picker.command_history() end, mode='n', desc = "Command History" },
         { "<leader><space>", function() require('snacks').picker.files() end, mode='n', desc = "Find Files" },
+        { "<leader>vf", function() require('snacks').picker.explorer() end, mode='n', desc = "View Files" },
         -- find
         { "<leader>fb", function() require('snacks').picker.buffers() end, mode='n', desc = "Buffers" },
         { "<leader>fc", function() require('snacks').picker.files({ cwd = vim.fn.stdpath("config") }) end, mode='n', desc = "Find Config File" },
