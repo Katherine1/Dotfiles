@@ -1,5 +1,5 @@
 return {
     'williamboman/mason.nvim',
-    opts = true,
+    opts = {},
     lazy = true
 }

@@ -1,7 +1,6 @@
 return {
     'ellisonleao/gruvbox.nvim',
     priority = 1000,
-    config = true,
     opts = {
         terminal_colors = true, -- add neovim terminal colors
         undercurl = true,
@@ -27,8 +26,7 @@ return {
         transparent_mode = false,
     },
     keys = {
-        {"<leader>gtl", function() vim.o.background="light" end, mode='n', desc="Switch to Light Mode"},
-        {"<leader>gtd", function() vim.o.background="dark" end, mode='n', desc="Switch to Dark Mode"},
+        {"<leader>gtt", function() vim.o.background= vim.o.background == "dark" and "light" or "dark" end, mode="n", desc="Toggle Between Dark and Light Mode"},
     },
     lazy = false
 }

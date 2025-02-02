@@ -3,7 +3,6 @@ return {
     dependencies = {
         'williamboman/mason.nvim',
         'neovim/nvim-lspconfig',
-        'saghen/blink.cmp'
     },
     init = function ()
         vim.opt.signcolumn = 'yes'
@@ -15,6 +14,8 @@ return {
                 local ok, config = pcall(require, 'lsp.' .. server_name)
                 if not ok then
                     config = {}
+                elseif config.root_markers then
+                    config.root_dir = require('lspconfig.util').root_pattern(unpack(config.root_markers))
                 end
                 require('lspconfig')[server_name].setup(config)
             end

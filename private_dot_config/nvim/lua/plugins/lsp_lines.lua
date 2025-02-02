@@ -9,6 +9,6 @@ return {
     keys = {
         { "<leader>l", function () require("lsp_lines").toggle() end, mode="n", desc="Toggle lsp_lines"},
     },
-    opts = true,
+    opts = {},
     lazy = false
 }
