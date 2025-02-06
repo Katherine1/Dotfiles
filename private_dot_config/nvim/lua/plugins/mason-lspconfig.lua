@@ -8,7 +8,7 @@ return {
         vim.opt.signcolumn = 'yes'
     end,
     opts = {
-        ensure_installed = {'lua_ls', 'powershell_es', 'clangd', 'csharp_ls', 'neocmake', 'jdtls'},
+        ensure_installed = {'lua_ls', 'powershell_es', 'clangd', 'csharp_ls', 'neocmake', 'jdtls', 'pyright'},
         handlers = {
             function(server_name)
                 local ok, config = pcall(require, 'lsp.' .. server_name)
