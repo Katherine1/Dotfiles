@@ -57,9 +57,9 @@ return {
         { "<leader>qp", function() require('snacks').picker.projects() end, mode='n', desc = "Projects" },
         -- LSP
         { "gd", function() require('snacks').picker.lsp_definitions() end, mode='n', desc = "Goto Definition" },
-        { "gr", function() require('snacks').picker.lsp_references() end, nowait = true, mode='n', desc = "References" },
-        { "gI", function() require('snacks').picker.lsp_implementations() end, mode='n', desc = "Goto Implementation" },
+        { "grr", function() require('snacks').picker.lsp_references() end, nowait = true, mode='n', desc = "References" },
+        { "gri", function() require('snacks').picker.lsp_implementations() end, mode='n', desc = "Goto Implementation" },
         { "gy", function() require('snacks').picker.lsp_type_definitions() end, mode='n', desc = "Goto T[y]pe Definition" },
-        { "<leader>ss", function() require('snacks').picker.lsp_symbols() end, mode='n', desc = "LSP Symbols" },
+        { "g0", function() require('snacks').picker.lsp_symbols() end, mode='n', desc = "LSP Symbols" },
     },
 }

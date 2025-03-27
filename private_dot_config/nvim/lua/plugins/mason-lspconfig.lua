@@ -4,9 +4,6 @@ return {
         'williamboman/mason.nvim',
         'neovim/nvim-lspconfig',
     },
-    init = function ()
-        vim.opt.signcolumn = 'yes'
-    end,
     opts = {
         ensure_installed = {'lua_ls', 'powershell_es', 'clangd', 'csharp_ls', 'neocmake', 'jdtls', 'pyright'},
         handlers = {
