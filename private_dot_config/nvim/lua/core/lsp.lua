@@ -1,10 +1,13 @@
 vim.diagnostic.config({
-    virtual_lines=true
+    virtual_lines= { current_line = false }
 })
 
 vim.keymap.set("n", "<leader>l", function()
-    vim.diagnostic.config({virtual_lines = not vim.diagnostic.config().virtual_lines})
-end, {desc="Toggle virtual lines"})
+    vim.diagnostic.config({
+        virtual_lines = {
+            current_line = not vim.diagnostic.config().virtual_lines.current_line
+        }
+    }) end, {desc="Toggle virtual lines"})
 
 vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
