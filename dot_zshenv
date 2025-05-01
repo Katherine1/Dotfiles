@@ -2,7 +2,7 @@
 export VISUAL="nvim"
 export SYSTEMD_EDITOR=$VISUAL
 export EDITOR=$VISUAL
-export TERMINAL="kitty"
+export TERMINAL="ghostty"
 export BROWSER="librewolf"
 
 export XDG_CONFIG_HOME="$HOME/.config"
