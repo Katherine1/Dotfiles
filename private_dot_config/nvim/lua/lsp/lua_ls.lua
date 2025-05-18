@@ -3,18 +3,6 @@ table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
 return {
-    cmd = {'lua-language-server'},
-    filetypes = {'lua'},
-    root_markers = {
-        '.luarc.json',
-        '.luarc.jsonc',
-        '.luacheckrc',
-        '.stylua.toml',
-        'styla.toml',
-        'selene.toml',
-        'selene.yml'
-    },
-    single_file_support = true,
     log_level = vim.lsp.protocol.MessageType.Warning,
     settings = {
         Lua = {

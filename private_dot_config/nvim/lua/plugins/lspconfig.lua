@@ -9,5 +9,16 @@ return {
             lspconfig_defaults.capabilities,
             require('blink.cmp').get_lsp_capabilities()
         )
+
+        local lsp_configs = {'lua_ls','rust_analyzer', 'clangd', 'csharp_ls', 'neocmake', 'jdtls', 'pyright'}
+
+        for _, lsp in ipairs(lsp_configs) do
+            local ok, config = pcall(require, 'lsp.' .. lsp)
+            if not ok then
+                config = {}
+            end
+            vim.lsp.config(lsp, config)
+            vim.lsp.enable(lsp)
+        end
     end,
 }
