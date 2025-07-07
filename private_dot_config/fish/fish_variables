@@ -23,6 +23,9 @@ SETUVAR XDG_CONFIG_HOME:/home/emily/\x2econfig
 SETUVAR XDG_DATA_HOME:/home/emily/\x2elocal/share
 SETUVAR _JAVA_OPTIONS:\x2dDjava\x2eutil\x2eprefs\x2euserRoot\x3d/home/emily/\x2econfig/java
 SETUVAR __fish_initialized:3800
+SETUVAR _fisher_jomik_2F_fish_2D_gruvbox_files:\x7e/\x2econfig/fish/functions/theme_gruvbox\x2efish
+SETUVAR _fisher_plugins:jomik/fish\x2dgruvbox
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:normal

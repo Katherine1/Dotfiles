@@ -1,11 +1,12 @@
 return {
     'nvim-lualine/lualine.nvim',
     dependencies = {
-        'nvim-tree/nvim-web-devicons'
+        'nvim-tree/nvim-web-devicons',
+        'neanias/everforest-nvim'
     },
     opts = {
         options = {
-            theme = 'gruvbox'
+            theme = 'everforest'
         },
     },
     lazy = false
