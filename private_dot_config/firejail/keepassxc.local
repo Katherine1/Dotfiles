@@ -1,0 +1,4 @@
+ignore private-dev
+protocol netlink,unix
+
+noblacklist ${RUNUSER}/app

@@ -1,0 +1,19 @@
+# Enable KeepassXC plugin support
+whitelist ${RUNUSER}/org.keepassxc.KeePassXC.BrowserServer
+
+noblacklist ${RUNUSER}/app
+mkdir ${RUNUSER}/app/org.keepassxc.KeePassXC
+whitelist ${RUNUSER}/app/org.keepassxc.KeePassXC
+
+# Whitelist native-messaging-hosts
+mkfile ${HOME}/.mozilla/native-messaging-hosts/org.keepassxc.keepassxc_browser.json
+whitelist ${HOME}/.mozilla/native-messaging-hosts/org.keepassxc.keepassxc_browser.json
+
+mkfile ${HOME}/.librewolf/native-messaging-hosts/org.keepassxc.keepassxc_browser.json
+whitelist ${HOME}/.librewolf/native-messaging-hosts/org.keepassxc.keepassxc_browser.json
+
+noblacklist ${HOME}/.mozilla
+whitelist ${HOME}/.mozilla
+
+#Private bin
+private-bin dbus-launch,dbus-send,librewolf,sh,keepassxc-proxy
