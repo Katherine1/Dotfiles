@@ -1,0 +1,5 @@
+#!/bin/env zsh
+
+function ip {
+    command ip -color $argv
+}

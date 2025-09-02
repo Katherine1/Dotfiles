@@ -1,0 +1,9 @@
+#!/bin/env zsh
+
+function ssh {
+    if [[ "$TERM" == "xterm-kitty" ]]; then
+        command kitten ssh $argv
+    else
+        command ssh $argv
+    fi
+}

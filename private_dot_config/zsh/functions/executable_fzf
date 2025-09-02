@@ -1,0 +1,9 @@
+#!/bin/env zsh
+
+function fzf {
+    if command -v bat &>/dev/null; then
+        command fzf --preview "bat --color=always --style=numbers --line-range=:500 {}" $argv
+    else
+        command fzf $argv
+    fi
+}

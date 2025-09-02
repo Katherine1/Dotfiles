@@ -1,0 +1,11 @@
+#!/bin/env zsh
+
+function ls {
+    if command -v bat &>/dev/null; then
+        command eza --icons --group-directories-first $argv
+    elif command -v exa &>/dev/null; then
+        command exa --icons --group-directories-first $argv
+    else
+        command ls --group-directories-first $argv
+    fi
+}

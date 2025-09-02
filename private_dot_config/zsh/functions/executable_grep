@@ -1,0 +1,5 @@
+#!/bin/env zsh
+
+function grep {
+    command grep --color=always $argv
+}

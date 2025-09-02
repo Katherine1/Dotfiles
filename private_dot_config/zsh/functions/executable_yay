@@ -1,0 +1,13 @@
+#!/bin/env zsh
+
+function yay {
+    if command -v paru &>/dev/null; then
+        command paru $argv
+    elif command -v yay &>/dev/null; then
+        command yay $argv
+    elif command -v pacman &>/dev/null; then
+        command pacman $argv
+    else
+        echo "This is not an Arch Linux system"
+    fi
+}
