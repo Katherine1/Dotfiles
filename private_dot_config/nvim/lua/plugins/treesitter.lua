@@ -3,7 +3,7 @@ return {
     build = ':TSUpdate',
     main = 'nvim-treesitter.configs',
     opts = {
-        ensure_installed = { "c", "cpp", "c_sharp", "cmake", "cuda", "go", "lua", "java", "qmljs", "vim", "vimdoc", "query", "rust", "sql", "python" },
+        ensure_installed = { "c", "cpp", "c_sharp", "cmake", "cuda", "go", "lua", "java", "qmljs", "typst", "vim", "vimdoc", "query", "rust", "sql", "python" },
         sync_install = false,
         auto_install = true,
         highlight = {
