@@ -1,7 +1,7 @@
 #!/bin/env zsh
 
 function ls {
-    if command -v bat &>/dev/null; then
+    if command -v eza &>/dev/null; then
         command eza --icons --group-directories-first $argv
     elif command -v exa &>/dev/null; then
         command exa --icons --group-directories-first $argv
