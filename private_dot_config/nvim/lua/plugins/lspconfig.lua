@@ -10,15 +10,14 @@ return {
             require('blink.cmp').get_lsp_capabilities()
         )
 
-        local lsp_configs = {'lua_ls','rust_analyzer', 'clangd', 'csharp_ls', 'fish_lsp', 'neocmake', 'qmlls', 'jdtls', 'pyright', 'tinymist'}
-
-        for _, lsp in ipairs(lsp_configs) do
-            local ok, config = pcall(require, 'lsp.' .. lsp)
-            if not ok then
-                config = {}
-            end
-            vim.lsp.config(lsp, config)
-            vim.lsp.enable(lsp)
-        end
+        vim.lsp.enable('lua_ls')
+        vim.lsp.enable('rust_analyzer')
+        vim.lsp.enable('clangd')
+        vim.lsp.enable('csharp_ls')
+        vim.lsp.enable('neocmake')
+        vim.lsp.enable('qmlls')
+        vim.lsp.enable('jdtls')
+        vim.lsp.enable('pyright')
+        vim.lsp.enable('tinymist')
     end,
 }
