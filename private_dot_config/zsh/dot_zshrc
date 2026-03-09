@@ -20,6 +20,7 @@ done
 
 # aliases
 #[ -f "${XDG_CONFIG_HOME}/shell/shell.sh" ] && source "${XDG_CONFIG_HOME}/shell/shell.sh"
+alias ls="ls"
 
 setopt prompt_subst
 setopt always_to_end
