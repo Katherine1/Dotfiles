@@ -48,8 +48,6 @@ export WLR_NO_HARDWARE_CURSORS=1
 #export SDL_VIDEODRIVER=wayland
 export GTK_USE_PORTAL=1
 
-export OLLAMA_API_BASE=http://127.0.0.1:11434
-
 # export BAT_THEME="Catppuccin-mocha"
 export BAT_THEME="gruvbox-dark"
 
